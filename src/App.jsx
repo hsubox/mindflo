@@ -1,13 +1,14 @@
 import firebase from 'firebase';
 import React, {Component} from 'react';
 import {Provider} from 'react-redux';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {Route, Router, Switch} from 'react-router-dom';
 import {applyMiddleware, createStore} from 'redux';
 import * as asyncInitialState from 'redux-async-initial-state';
 import ReduxThunk from 'redux-thunk';
 import Home from './components/Home';
 import LoginForm from './components/LoginForm';
 import MainNavBar from './components/MainNavBar';
+import history from './history';
 import reducers from './reducers';
 
 export class App extends Component {
@@ -45,7 +46,7 @@ export class App extends Component {
 
     return (
       <Provider store={store}>
-        <BrowserRouter>
+        <Router history={history}>
           <div>
             <MainNavBar />
             <Switch>
@@ -53,7 +54,7 @@ export class App extends Component {
               <Route path='/login' component={LoginForm} />
             </Switch>
           </div>
-        </BrowserRouter>
+        </Router>
       </Provider>
     );
   }

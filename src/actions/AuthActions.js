@@ -1,5 +1,5 @@
 import firebase from 'firebase';
-import createHistory from 'history/createBrowserHistory';
+import history from './../history';
 import {
   LOGIN_FORM_UPDATE,
   LOGIN_USER_BEGIN,
@@ -9,8 +9,6 @@ import {
   LOGOUT_USER_FAIL,
   LOGOUT_USER_SUCCESS,
 } from './types';
-
-const history = createHistory();
 
 export const loginFormUpdate = (field, value) => {
   return {
@@ -40,13 +38,13 @@ export const loginUser = ({email, password}) => {
     firebase.auth().signInWithEmailAndPassword(email, password)
       .then((user) => {
         loginUserSuccess(dispatch, user);
-        history.push('/');
+        history.push('/user');
       })
       .catch(() => {
         firebase.auth().createUserWithEmailAndPassword(email, password)
           .then((user) => {
             loginUserSuccess(dispatch, user);
-            history.push('/');
+            history.push('/user');
           })
           .catch(() => loginUserFail(dispatch));
       });
@@ -72,9 +70,11 @@ export const logoutUser = () => {
     firebase.auth().signOut()
       .then(() => {
         logoutUserSuccess(dispatch);
+        history.push('/');
       })
       .catch(() => {
         logoutUserFail(dispatch);
+        history.push('/');
       });
   };
 };
