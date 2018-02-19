@@ -1,3 +1,42 @@
-.hello-world {
-  color: red;
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+* {
+  font-family: 'Inconsolata', monospace;
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.header {
+  background-color: #DFF8EB;
+  img {
+    height: 2rem;
+    padding: 2rem;
+  }
+}
+
+.grid {
+  background-color: #40798C;
+  border: 2px solid #F24D55;
+  color: #E7E7E7;
+  table {
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  th, td {
+    border: 2px solid #E7E7E7;
+    padding: 1rem;
+  }
+  text-align: center;
+}
+
+.playground {
+  background-color: #DFF8EB;
+  color: #F24D55;
+  padding: 2rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
 }
