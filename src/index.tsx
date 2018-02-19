@@ -1,10 +1,11 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import Header from './components/Header';
-import Grid from './components/Grid';
-import Playground from './components/Playground';
+import * as firebase from "firebase";
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import Grid from "./components/Grid";
+import Header from "./components/Header";
+import Playground from "./components/Playground";
 
-import './styles/app.scss';
+import "./styles/app.scss";
 
 ReactDOM.render(
   <div>
@@ -12,5 +13,5 @@ ReactDOM.render(
     <Grid />
     <Playground />
     </div>,
-  document.getElementById('app')
+  document.getElementById("app"),
 );

@@ -1,8 +1,8 @@
-import * as React from 'react';
-import {Component} from 'react';
+import * as React from "react";
+import {Component} from "react";
 
 export class Grid extends Component {
-  render() {
+  public render() {
     return (
       <div className="grid">
         <table>

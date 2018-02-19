@@ -1,9 +1,8 @@
-import * as React from 'react';
-import {Component} from 'react';
-
+import * as React from "react";
+import {Component} from "react";
 
 export class Playground extends Component {
-  render() {
+  public render() {
     return (
       <div className="playground">
         <h2>MINDFLO PLAYGROUND</h2>
