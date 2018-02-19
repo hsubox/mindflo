@@ -1,10 +1,9 @@
-import * as React from "react";
-import {Component} from "react";
+import React, {Component} from 'react';
 
 export class Grid extends Component {
-  public render() {
+  render() {
     return (
-      <div className="grid">
+      <div className='grid'>
         <table>
           <tr>
             <th>Wow, cool grid!</th>
