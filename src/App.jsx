@@ -8,6 +8,7 @@ import ReduxThunk from 'redux-thunk';
 import Home from './components/Home';
 import LoginForm from './components/LoginForm';
 import MainNavBar from './components/MainNavBar';
+import UserAccountInfo from './components/UserAccountInfo';
 import history from './history';
 import reducers from './reducers';
 
@@ -30,16 +31,22 @@ export class App extends Component {
 
     const loadStore = (currentState) => {
       return new Promise((resolve) => {
-          resolve({...currentState});
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+            resolve({
+              ...currentState,
+              auth: {
+                ...currentState.auth,
+                user: user,
+              },
+            });
+          } else {
+            resolve({
+              ...currentState,
+            });
+          }
+        });
       });
-      // return new Promise((resolve) => {
-      //   firebase.database().ref(`/`)
-      //     .once('value', (snapshot) => {
-      //       resolve({
-      //         ...currentState,
-      //       });
-      //     });
-      // });
     };
 
     const store = createStore(reducer, {}, applyMiddleware(ReduxThunk, asyncInitialState.middleware(loadStore)));
@@ -52,6 +59,7 @@ export class App extends Component {
             <Switch>
               <Route path='/' exact={true} component={Home} />
               <Route path='/login' component={LoginForm} />
+              <Route path='/user' component={UserAccountInfo} />
             </Switch>
           </div>
         </Router>
