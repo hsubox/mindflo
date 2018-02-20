@@ -1,26 +1,11 @@
 import React, {Component} from 'react';
+import GridColumn from './GridColumn';
 
 export class Grid extends Component {
   render() {
     return (
-      <div className='grid'>
-        <table>
-          <tr>
-            <th>Wow, cool grid!</th>
-            <th>Ooh</th>
-            <th>Snazzy!!!</th>
-          </tr>
-          <tr>
-            <th>3</th>
-            <td>4</td>
-            <td>8</td>
-          </tr>
-          <tr>
-             <th>1</th>
-             <td>5</td>
-             <td>0</td>
-           </tr>
-        </table>
+      <div className="grid">
+        <GridColumn />
       </div>
     );
   }
