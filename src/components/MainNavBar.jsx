@@ -6,8 +6,9 @@ import {logoutUser} from '../actions';
 class MainNavBar extends Component {
   render() {
     return (
-      <div>
+      <div className='main-nav-bar'>
         <nav>
+          <Link to='/'>MENU +</Link>
           {this.loggedInUser()}
         </nav>
       </div>

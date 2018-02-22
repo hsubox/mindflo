@@ -55,7 +55,6 @@ export class App extends Component {
       <Provider store={store}>
         <Router history={history}>
           <div>
-            <MainNavBar />
             <Switch>
               <Route path='/' exact={true} component={Home} />
               <Route path='/login' component={LoginForm} />
