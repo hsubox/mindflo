@@ -1,11 +1,10 @@
-.main-nav-bar {
-  a {
-    padding: 2.5rem;
-    font-size: .8rem;
-    color: #F24D55;
-    text-decoration: none;
-  }
-  a:hover, a:active, a:visited {
-    color: rgba(242,77,85,.7);
-  }
+.main-nav-bar__a {
+  padding: 2.5rem;
+  font-size: .8rem;
+  color: #F24D55;
+  text-decoration: none;
+}
+
+.main-nav-bar__a:hover, .main-nav-bar__a:active {
+  color: rgba(242,77,85,.7);
 }

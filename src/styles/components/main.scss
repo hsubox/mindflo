@@ -6,3 +6,16 @@
   font-size: 1rem;
   margin: 0;
 }
+
+.btn {
+  padding: .5em;
+  margin: .5em;
+}
+
+.btn-default {
+  background-color: #DFF8EB;
+}
+
+.btn-default:hover {
+  background-color: rgba(242,77,85,.7);
+}
