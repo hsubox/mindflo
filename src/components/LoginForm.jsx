@@ -19,9 +19,9 @@ class LoginForm extends Component {
     } = this.props;
     return (
       <div className='login-form'>
-        <form>
-          <InputTextField fieldName='Email' placeholder='Email' value={email} onChange={loginFormUpdate}/>
-          <InputTextField type='password' placeholder='Password' fieldName='Password' value={password} onChange={loginFormUpdate}/>
+        <form className='login-form__form'>
+          <span className='login-form__element'><InputTextField fieldName='Email' placeholder='Email' value={email} onChange={loginFormUpdate} /></span>
+          <span className='login-form__element'><InputTextField type='password' placeholder='Password' fieldName='Password' value={password} onChange={loginFormUpdate} /></span>
           <a onClick={this.onButtonPress.bind(this)} className='btn btn-default'>Login</a>
         </form>
       </div>

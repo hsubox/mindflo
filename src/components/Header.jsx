@@ -6,7 +6,7 @@ export class Header extends Component {
   render() {
     return (
       <div className='header'>
-        <Link to="/"><img src={'../images/mindflo.png'} alt='mindflo' /></Link>
+        <Link to="/"><img src={'../images/mindflo.png'} alt='mindflo' className='header__image'/></Link>
         <MainNavBar />
       </div>
     );
