@@ -1,9 +1,8 @@
-import * as React from "react";
-import {Component} from "react";
-import GridColumn from "./GridColumn";
+import React, {Component} from 'react';
+import GridColumn from './GridColumn';
 
 export class Grid extends Component {
-  public render() {
+  render() {
     return (
       <div className="grid">
         <GridColumn />
