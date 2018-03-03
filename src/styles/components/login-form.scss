@@ -1,15 +1,16 @@
-.login-form__form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 3em auto;
-  padding: 3em;
-  border: 1px solid #F24D55;
-  width: 20em;
-  text-align: center;
-}
-
-.login-form__element {
-  padding: .5em;
-  margin: .5em;
+.login-form {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 48px auto;
+    padding: 48px;
+    width: 320px;
+    border: 1px solid #F24D55;
+    text-align: center;
+  }
+  &__element {
+    margin: 8px;
+    padding: 8px;
+  }
 }

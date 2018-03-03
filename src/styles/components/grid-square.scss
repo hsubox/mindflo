@@ -1,29 +1,24 @@
 .grid-square {
-  display: inline-flex;
-  flex-direction: row;
-  margin: 2rem;
-}
-
-.grid-square__input[type="checkbox"] {
   display: flex;
   flex-direction: column;
-  margin: .65em;
-  height: 1px;
-  width: 1px;
-  opacity: 0;
-}
-
-.grid-square__label {
-  position: relative;
-  margin: auto;
-  padding: 10px 18px;
-  height: 1px;
-  width: 1px;
-  background-color: #E7E7E7;
-  border: 1px dotted #DFF8EB;
-}
-
-.grid-square__input[type="checkbox"]:checked + label {
-  background-color: #19323C;
-  border: none;
+  margin: 32px;
+  &__input {
+    margin: 8px;
+    height: 1px;
+    width: 1px;
+    opacity: 0;
+    &:checked + label {
+      background-color: #19323C;
+      border: none;
+    }
   }
+  &__label {
+    position: relative;
+    margin: auto;
+    padding: 10px 18px;
+    height: 1px;
+    width: 1px;
+    background-color: #E7E7E7;
+    border: 1px dotted #DFF8EB;
+  }
+}

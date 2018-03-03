@@ -1,21 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata');
 
 * {
+  margin: 0;
+  font-size: 16px;
   font-family: 'Inconsolata', monospace;
   font-weight: 400;
-  font-size: 1rem;
-  margin: 0;
-}
-
-.btn {
-  padding: .5em;
-  margin: .5em;
 }
 
 .btn-default {
+  margin: 8px;
+  padding: 8px;
   background-color: #DFF8EB;
-}
-
-.btn-default:hover {
-  background-color: rgba(242,77,85,.7);
+  &:hover {
+    background-color: rgba(242,77,85,.7);
+  }
 }

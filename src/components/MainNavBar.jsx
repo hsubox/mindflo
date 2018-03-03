@@ -8,7 +8,7 @@ class MainNavBar extends Component {
     return (
       <div className='main-nav-bar'>
         <nav>
-          <Link to='/' className='main-nav-bar__a'>MENU +</Link>
+          <Link to='/' className='main-nav-bar__link'>MENU +</Link>
           {this.loggedInUser()}
         </nav>
       </div>
@@ -18,9 +18,9 @@ class MainNavBar extends Component {
   loggedInUser() {
     const user = this.props.user;
     if (!user) {
-      return <Link to='/login' className='main-nav-bar__a'>Login</Link>;
+      return <Link to='/login' className='main-nav-bar__link'>Login</Link>;
     }
-    return <Link to='/' onClick={this.onLogoutPress} className='main-nav-bar__a'>Logout</Link>;
+    return <Link to='/' onClick={this.onLogoutPress} className='main-nav-bar__link'>Logout</Link>;
   }
 
   onLogoutPress() {
