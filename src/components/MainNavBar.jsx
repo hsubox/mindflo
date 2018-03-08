@@ -20,12 +20,12 @@ class MainNavBar extends Component {
     if (!user) {
       return <Link to='/login' className='main-nav-bar__link'>Login</Link>;
     }
-    return <Link to='/' onClick={this.onLogoutPress} className='main-nav-bar__link'>Logout</Link>;
+    return <Link to='/' onClick={this.onLogoutPress.bind(this)} className='main-nav-bar__link'>Logout</Link>;
   }
 
-  onLogoutPress() {
+  onLogoutPress(event) {
     event.preventDefault();
-    logoutUser();
+    this.props.logoutUser();
   }
 }
 
