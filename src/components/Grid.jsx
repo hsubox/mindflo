@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import GridColumn from './GridColumn';
+import GridSquare from './GridSquare';
 
 export class Grid extends Component {
   render() {
     return (
       <div className="grid">
-        <GridColumn />
+        <GridSquare />
       </div>
     );
   }
